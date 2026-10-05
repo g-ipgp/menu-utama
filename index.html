@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kelas 3 Bestari · Keselamatan Kebakaran di Sekolah</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#30214f;--paper:#fffdf5;--line:#bfe3f5;--margin:#ff9db1;--sun:#ffd23f;--mint:#80dfc0;--sky:#8bd9ff}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Fredoka,system-ui,sans-serif;color:var(--ink)}
+body{min-height:100vh;padding:10px 18px 28px;background:#dff4ff}
+.book{position:relative;max-width:1400px;margin:auto;min-height:calc(100vh - 20px);padding:46px 55px 42px 100px;border:4px solid #b9a98f;border-radius:24px 34px 34px 24px;background-color:var(--paper);background-image:linear-gradient(90deg,transparent 76px,var(--margin) 76px 80px,transparent 80px),repeating-linear-gradient(transparent 0 52px,var(--line) 52px 55px);box-shadow:12px 14px 0 #9ac7da}
+.book:before{content:"";position:absolute;left:20px;top:48px;bottom:35px;width:40px;background:radial-gradient(circle,#656b78 0 9px,transparent 10px) 0 0/40px 67px repeat-y}
+.head{text-align:center;margin-bottom:36px}.badge{display:inline-block;padding:9px 22px;border:5px solid var(--ink);border-radius:999px;background:var(--sun);box-shadow:0 5px 0 var(--ink);font-weight:700;font-size:19px}.head h1{font:700 clamp(34px,5vw,62px)/1.05 Fredoka;margin:24px 0 8px}.head p{margin:0;font-weight:600;font-size:clamp(16px,2vw,20px)}.free{font-weight:700;color:#e14b86}
+.flow{display:grid;grid-template-columns:1fr 74px 1fr 74px 1fr;gap:18px;align-items:center;margin-top:32px}.arrow{text-align:center;font:700 54px/1 Patrick Hand;color:#7354a7;transform:rotate(-4deg)}
+.card{position:relative;min-height:335px;border:5px solid var(--ink);border-radius:28px 28px 34px 20px;padding:28px 22px 22px;background:#fff;box-shadow:10px 12px 0 var(--ink);text-align:center;cursor:pointer;text-decoration:none;color:inherit;transition:.15s transform}.card:hover{transform:translateY(-6px)}.card.note-card{background:#fff1a8}.card.game-card{background:#d9f7ec}.card.ekod-card{background:#eadfff}.num{position:absolute;left:-19px;top:-21px;width:58px;height:58px;border:5px solid var(--ink);border-radius:50%;display:grid;place-items:center;background:#fff;font:700 28px Patrick Hand}.icon{font-size:76px;line-height:1;margin:8px 0 14px}.card h2{font-size:31px;margin:4px 0 8px}.card p{font-size:17px;line-height:1.55;margin:8px 0}.tag{display:inline-flex;align-items:center;gap:6px;margin-top:15px;padding:7px 14px;border:3px solid var(--ink);border-radius:999px;background:#fff;font-weight:700;font-size:14px}.tag.played{background:var(--sky)}
+.how{max-width:940px;margin:50px auto 0;padding:16px 22px;border:4px dashed #9b78cf;border-radius:18px;background:#fff8d7;text-align:center;font:600 18px/1.55 Patrick Hand}.reset{display:block;margin:30px auto 0;border:3px solid var(--ink);border-radius:999px;padding:10px 16px;background:#fff;color:var(--ink);font:700 14px Fredoka;cursor:pointer}
+@media(max-width:900px){body{padding:0}.book{padding:30px 22px 35px 66px;border-radius:0;min-height:100vh}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);font-size:36px;margin:-6px}.card{min-height:0}.head h1{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="book">
+<header class="head">
+<span class="badge">🏫 KELAS 3 BESTARI</span>
+<h1>🔥 Keselamatan Kebakaran di Sekolah</h1>
+<p>Pilih mana-mana aktiviti. <span class="free">Tidak perlu ikut turutan.</span></p>
+</header>
+<main class="flow">
+<a class="card note-card" target="_blank" rel="noopener" href="nota.html" data-key="note">
+<span class="num">1</span><div class="icon">📒</div><h2>Nota Interaktif</h2>
+<p>Buka nota interaktif asal yang cikgu beri.</p><span class="tag" id="st-note">○ Belum dibuka</span>
+</a>
+<div class="arrow">→</div>
+<a class="card game-card" target="_blank" rel="noopener" href="mini_game.html" data-key="mini">
+<span class="num">2</span><div class="icon">🧺</div><h2>Mini Game</h2>
+<p>Buka Mini Game asal tanpa sebarang perubahan.</p><span class="tag" id="st-mini">○ Belum dimainkan</span>
+</a>
+<div class="arrow">→</div>
+<a class="card ekod-card" target="_blank" rel="noopener" href="e_kod_misi.html" data-key="ekod">
+<span class="num">3</span><div class="icon">⭐</div><h2>e-KOD MISI</h2>
+<p>Buka e-KOD MISI asal tanpa sebarang perubahan.</p><span class="tag" id="st-ekod">○ Belum dimainkan</span>
+</a>
+</main>
+<div class="how">✏️ <b>Cara guna:</b> tekan mana-mana kad. Aktiviti akan dibuka dalam <b>tab baharu</b> dan fail HTML asal dipaparkan <b>100% seperti yang diberi</b>. Selepas selesai, tutup tab aktiviti untuk kembali ke Menu Utama. Menu akan menanda aktiviti yang pernah dibuka/dimainkan.</div>
+<button class="reset" id="reset">↻ Padam tanda kemajuan</button>
+</div>
+<script>
+(function(){
+  const KEY='k3bestari_opened_v2';
+  function read(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){return {}}}
+  function write(v){try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}}
+  function refresh(){
+    const p=read();
+    [['note','st-note','dibuka'],['mini','st-mini','dimainkan'],['ekod','st-ekod','dimainkan']].forEach(([k,id,word])=>{
+      const el=document.getElementById(id); if(!el)return;
+      if(p[k]){el.textContent='✓ Sudah '+word;el.classList.add('played')}else{el.textContent='○ Belum '+word;el.classList.remove('played')}
+    });
+  }
+  document.querySelectorAll('a[data-key]').forEach(a=>a.addEventListener('click',()=>{const p=read();p[a.dataset.key]=true;write(p);setTimeout(refresh,80)}));
+  document.getElementById('reset').addEventListener('click',()=>{if(confirm('Padam tanda aktiviti yang pernah dibuka?')){try{localStorage.removeItem(KEY)}catch(e){}refresh()}});
+  window.addEventListener('focus',refresh);refresh();
+})();
+</script>
+
+<div id="zipWarn" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(20,15,35,.96);color:white;align-items:center;justify-content:center;text-align:center;padding:24px;font-family:Arial,sans-serif">
+  <div style="max-width:620px;background:#fff;color:#2d2148;border-radius:24px;padding:28px;border:5px solid #352354">
+    <div style="font-size:54px">📦</div>
+    <h2 style="margin:8px 0">Fail masih dibuka dari dalam ZIP</h2>
+    <p style="font-size:18px;line-height:1.5">Windows akan meletakkan satu fail sahaja dalam folder sementara. Sebab itu Nota/Mini Game/e-KOD jadi <b>File not found</b>.</p>
+    <p style="font-size:18px;line-height:1.5"><b>Tutup halaman ini → klik kanan ZIP → Extract All… → buka folder yang diekstrak → klik index.html.</b></p>
+  </div>
+</div>
+<script>
+(function(){
+  var p=decodeURIComponent(location.href).toLowerCase();
+  if(p.includes('.zip') || p.includes('\\temp\\') && p.includes('kelas3bestari')){
+    document.getElementById('zipWarn').style.display='flex';
+  }
+})();
+<\/script>
+</body>
+</html>
